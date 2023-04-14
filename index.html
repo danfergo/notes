@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="projects-container">
+        <div class="project-box">
+            <form id="create-project-form">
+                <input type="text" id="project-title-input" placeholder="Project title">
+                <button class="btn" type="submit">Create</button>
+            </form>
+            <ul id="projects-list">
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.0/dexie.min.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

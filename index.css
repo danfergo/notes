@@ -1,0 +1,72 @@
+html {
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+a {
+    color:black !important;
+    font-weight: bold;
+    padding:0.3rem 0.8rem;
+    display: block;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    border-radius: 0.3rem;
+    border:none;
+    padding: 0 0.6rem;
+}
+
+.project-box {
+    width: 600px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    background: white;
+}
+
+/* Add styles for the form and input */
+#create-project-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#project-title-input {
+    flex-grow: 1;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Add styles for the projects list */
+#projects-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#projects-list li {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#projects-list a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#projects-list a:hover {
+    text-decoration: underline;
+}

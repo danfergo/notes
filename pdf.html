@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.1/pdf.min.js"></script>
+
+  <title>PDF Viewer</title>
+</head>
+<body>
+  <canvas id="pdf-viewer"></canvas>
+  <script>
+    const url = 'https://arxiv.org/pdf/2103.10360.pdf'; // Replace with the path to your PDF file
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.1/pdf.worker.min.js';
+
+    const canvas = document.getElementById('pdf-viewer');
+    const ctx = canvas.getContext('2d');
+
+    pdfjsLib.getDocument(url).promise.then((pdfDoc) => {
+    pdfDoc.getPage(1).then((page) => {
+        const viewport = page.getViewport({ scale: 1 });
+
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        const renderCtx = {
+        canvasContext: ctx,
+        viewport: viewport
+        };
+
+        page.render(renderCtx);
+    });
+    });
+  </script>
+</body>
+</html>
